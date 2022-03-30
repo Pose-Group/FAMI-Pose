@@ -5,4 +5,4 @@
 ![Fig2-Pipeline](Fig2-Pipeline.jpg)
 
 ---
-- [ ] paper: https://arxiv.org/abs/2203.15227
+- [x] paper: https://arxiv.org/abs/2203.15227
