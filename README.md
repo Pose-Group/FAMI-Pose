@@ -5,4 +5,14 @@
 ![Fig2-Pipeline](Fig2-Pipeline.jpg)
 
 ---
-- [x] paper: https://arxiv.org/abs/2203.15227
+## Installation
+
+Please check the guide of [DCPose](https://github.com/Pose-Group/DCPose) to run the code. There are a few caveats:
+
+- Updated `DcPose_supp_files` can be downloaded [here](https://drive.google.com/file/d/1SnMxpdcMKXDE442jZGt4Dfb6ah5AS_hM/view?usp=sharing).
+- Deformable Convolution have been implemented in `Pytorch1.8`.
+
+- Note that **pre-train models** are not available, so you have to train the model from scratch.
+
+
+

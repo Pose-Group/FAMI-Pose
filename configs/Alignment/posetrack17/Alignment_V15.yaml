@@ -1,0 +1,40 @@
+_BASE_: "../Base_PoseTrack17.yaml"
+EXPERIMENT_NAME: 'Alignment_V15'
+WORKERS: 3
+#PRINT_FREQ: 10
+GPUS: (1,)
+OUTPUT_DIR: './output/Alignment/'
+
+DISTANCE: 3
+CORE_FUNCTION: AlignmentMIFunction_Term6_V1
+DATASET:
+  NAME: "PoseTrack_Alignment"
+
+MODEL:
+  NAME: Alignment_V15
+  PRETRAINED: './DcPose_supp_files/pretrained_models/out_model.pth'
+  BACKBONE_PRETRAINED: './DcPose_supp_files/pretrained_models/out_model.pth'
+LOSS:
+  HEATMAP_MSE:
+    USE: true
+    WEIGHT: 1.0
+
+TRAIN:
+  AUTO_RESUME: true
+  SAVE_MODEL_PER_EPOCH: 1
+  BATCH_SIZE_PER_GPU: 48
+  LR: 1e-3
+  END_EPOCH: 21
+  MILESTONES:
+    - 10
+    - 15
+VAL:
+  BATCH_SIZE_PER_GPU: 48
+  MODEL_FILE: ''
+TEST:
+  BATCH_SIZE_PER_GPU: 256
+  MODEL_FILE: ''
+
+DEBUG:
+  VIS_SKELETON: false
+  VIS_BBOX: false
